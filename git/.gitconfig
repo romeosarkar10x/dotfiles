@@ -1,0 +1,8 @@
+[init]
+	defaultBranch = main
+[user]
+	email = romeosarkar10x@gmail.com
+	name = Romeo Sarkar
+	signingkey = D18E7EE704BD9CEDC9A57836BA45B7A5E1057928
+[commit]
+	gpgsign = true
