@@ -40,14 +40,29 @@ This creates symlinks from `~/.config/nvim` pointing to `~/dotfiles/nvim/.config
 stow bash git nvim tmux
 ```
 
+### Stow everything
+```bash
+stow */
+```
+
 ### Remove a package
 ```bash
 stow -D nvim
 ```
 
+### Remove all packages
+```bash
+stow -D */
+```
+
 ### Restow (useful after updating)
 ```bash
 stow -R nvim
+```
+
+### Restow everything
+```bash
+stow -R */
 ```
 
 ### Preview changes (dry run)
@@ -68,10 +83,10 @@ dotfiles/
 │   └── .bashrc
 └── git/
     └── .gitconfig
-    ```
+```
 
-    ## Notes
+## Notes
 
-    - Run stow commands from the `~/dotfiles` directory
-    - If you get conflicts, backup and remove existing files first
-    - Use `stow -t ~` if your dotfiles repo isn't directly in `$HOME`
+- Run stow commands from the `~/dotfiles` directory
+- If you get conflicts, backup and remove existing files first
+- Use `stow -t ~` if your dotfiles repo isn't directly in `$HOME`
