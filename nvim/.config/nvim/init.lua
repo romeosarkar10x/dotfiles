@@ -33,7 +33,6 @@ vim.cmd("set shellcmdflag=-c")
 vim.cmd("set shellquote=")
 vim.cmd("set shellxquote=")
 
-vim.cmd("autocmd TermOpen * startinsert")
 
 vim.keymap.set("t", "<Esc>", [[<C-\><C-n>]])
 vim.keymap.set("t", "<C-[>", [[<C-\><C-n>]])
@@ -42,6 +41,7 @@ vim.api.nvim_create_autocmd("TermOpen", {
     callback = function()
         vim.opt_local.number = true
         vim.opt_local.relativenumber = true
+        vim.cmd("startinsert")
     end
 })
 
