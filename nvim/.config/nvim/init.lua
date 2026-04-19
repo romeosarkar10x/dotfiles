@@ -46,3 +46,5 @@ vim.api.nvim_create_autocmd("TermOpen", {
 })
 
 require("config.lazy")
+require("config.diagnostics")
+
