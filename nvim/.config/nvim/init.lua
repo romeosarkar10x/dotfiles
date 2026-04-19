@@ -9,7 +9,7 @@ vim.cmd("set number")
 vim.cmd("set relativenumber")
 vim.cmd("set ruler")
 vim.cmd("set autoindent")
-vim.cmd("syntax on")
+-- vim.cmd("syntax enable") -- This causes a bug where FileType callbacks dont' run properly
 vim.cmd("set guicursor=i:block")
 
 vim.cmd("nnoremap <C-h> <C-w>h")
