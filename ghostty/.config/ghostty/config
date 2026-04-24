@@ -42,6 +42,8 @@
 # # which is explained in the docs for that config option.
 # # Just for example:
 # resize-overlay-duration = 4s 200ms
+
+shell-integration = none
 font-family = AgaveNerdFont
 theme = catppuccin-mocha.conf
 window-padding-x = 10
