@@ -23,6 +23,23 @@ return {
         vim.lsp.enable("lua_ls")
         vim.lsp.enable("jsonls")
         vim.lsp.enable("ts_ls")
+
+        vim.lsp.config("yamlls", {
+            settings = {
+                yaml = {
+                    schemas = {
+                        ["https://json.schemastore.org/github-workflow.json"] = "/.github/workflows/*",
+                        ["https://raw.githubusercontent.com/compose-spec/compose-spec/master/schema/compose-spec.json"] = { "docker-compose*.yml", "compose*.yml" },
+                        ["https://json.schemastore.org/kustomization.json"] = "kustomization.yaml",
+                    },
+                    validate = true,
+                    completion = true,
+                    hover = true
+                }
+            }
+        })
+
+        vim.lsp.enable("yamlls")
     end
 }
 
