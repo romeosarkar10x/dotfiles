@@ -44,7 +44,7 @@
 # resize-overlay-duration = 4s 200ms
 
 shell-integration = none
-font-family = AgaveNerdFont
+font-family = Agave Nerd Font
 theme = catppuccin-mocha.conf
 window-padding-x = 10
 window-padding-y = 10
