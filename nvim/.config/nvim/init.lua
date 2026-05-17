@@ -37,6 +37,9 @@ vim.cmd("set shellxquote=")
 vim.keymap.set("t", "<Esc>", [[<C-\><C-n>]])
 vim.keymap.set("t", "<C-[>", [[<C-\><C-n>]])
 
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
+
 vim.api.nvim_create_autocmd("TermOpen", {
     callback = function()
         vim.opt_local.number = true
