@@ -2,7 +2,7 @@ return {
     "neovim/nvim-lspconfig",
     priority = 1000,
     lazy = false,
-    dependencies = { "mason-org/mason.nvim" },
+    dependencies = { "mason-org/mason.nvim", "saghen/blink.cmp" },
     config = function ()
         vim.lsp.config("lua_ls", {
             settings = {
