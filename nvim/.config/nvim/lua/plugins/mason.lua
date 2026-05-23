@@ -4,7 +4,7 @@ return {
         "mason-org/mason-lspconfig.nvim",
         dependencies = { "mason-org/mason.nvim", "neovim/nvim-lspconfig" },
         opts = {
-            ensure_installed = { "lua_ls", "jsonls", "ts_ls", "yamlls", "jdtls" },
+            ensure_installed = { "lua_ls", "jsonls", "ts_ls", "yamlls", "jdtls", "lemminx" },
             automatic_enable = false
         }
     }

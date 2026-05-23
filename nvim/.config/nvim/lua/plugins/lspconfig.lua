@@ -40,6 +40,7 @@ return {
         })
 
         vim.lsp.enable("yamlls")
+        vim.lsp.enable("lemminx")
 
         vim.keymap.set("n", "<leader>lf", function() vim.lsp.buf.format() end)
     end
