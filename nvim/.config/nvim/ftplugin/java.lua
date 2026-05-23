@@ -48,9 +48,4 @@ local config = {
     end,
 }
 
-print("launcher: " .. launcher)
-print("config_dir: " .. config_dir)
-print("root_dir: " .. (config.root_dir or "NIL"))
-print("workspace_dir: " .. workspace_dir)
-
 jdtls.start_or_attach(config)
