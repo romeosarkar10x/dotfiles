@@ -17,6 +17,10 @@ vim.cmd("nnoremap <C-j> <C-w>j")
 vim.cmd("nnoremap <C-k> <C-w>k")
 vim.cmd("nnoremap <C-l> <C-w>l")
 
+vim.keymap.set("n", "<A-h>", "<cmd>vertical resize -1<cr>");
+vim.keymap.set("n", "<A-l>", "<cmd>vertical resize +1<cr>");
+vim.keymap.set("n", "<A-j>", "<cmd>resize -1<cr>");
+vim.keymap.set("n", "<A-k>", "<cmd>resize +1<cr>");
 
 vim.cmd("set shell=bash")
 vim.cmd("set shellcmdflag=-c")
