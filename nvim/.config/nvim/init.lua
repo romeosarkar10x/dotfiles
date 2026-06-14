@@ -17,28 +17,19 @@ vim.cmd("nnoremap <C-j> <C-w>j")
 vim.cmd("nnoremap <C-k> <C-w>k")
 vim.cmd("nnoremap <C-l> <C-w>l")
 
-vim.cmd("inoremap <C-h> <C-w>")
--- print("hello world")
-
--- print("this is neovim!")
-
-
--- require("keymaps")
--- require("config.lazy")
-
--- vim.cmd.colorscheme "catppuccin"
 
 vim.cmd("set shell=bash")
 vim.cmd("set shellcmdflag=-c")
 vim.cmd("set shellquote=")
 vim.cmd("set shellxquote=")
 
-
 vim.keymap.set("t", "<Esc>", [[<C-\><C-n>]])
 vim.keymap.set("t", "<C-[>", [[<C-\><C-n>]])
 
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
+
+vim.keymap.set("n", "<leader>r", ":source $MYVIMRC<CR>", { desc = "Reload config" })
 
 vim.api.nvim_create_autocmd("TermOpen", {
     callback = function()
@@ -51,3 +42,4 @@ vim.api.nvim_create_autocmd("TermOpen", {
 require("config.lazy")
 require("config.diagnostics")
 
+vim.cmd.colorscheme "catppuccin-mocha"
