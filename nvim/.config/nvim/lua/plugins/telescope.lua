@@ -6,7 +6,10 @@ return {
     },
     config = function ()
         vim.keymap.set("n", "<leader>f", function ()
-                require("telescope.builtin").find_files()
+                require("telescope.builtin").find_files({
+                    hidden = true,
+                    file_ignore_patterns = { "%.git/" }
+                })
             end
         )
     end
