@@ -42,6 +42,7 @@ return {
         vim.lsp.enable("yamlls")
         vim.lsp.enable("lemminx")
         vim.lsp.enable("pyright")
+        vim.lsp.enable("ruff")
 
         vim.keymap.set("n", "<leader>lf", function() vim.lsp.buf.format() end)
     end
