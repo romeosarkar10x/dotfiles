@@ -47,6 +47,9 @@ vim.api.nvim_create_autocmd("TermOpen", {
 
 vim.keymap.set("n", "K", function() vim.lsp.buf.hover({ border = "rounded" }) end)
 
+vim.keymap.set("n", "gy", function() vim.lsp.buf.type_definition() end)
+vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end)
+
 require("config.lazy")
 require("config.diagnostics")
 
