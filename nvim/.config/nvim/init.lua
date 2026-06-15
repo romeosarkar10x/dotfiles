@@ -22,7 +22,6 @@ vim.keymap.set("n", "<A-l>", "<cmd>vertical resize +1<cr>");
 vim.keymap.set("n", "<A-j>", "<cmd>resize -1<cr>");
 vim.keymap.set("n", "<A-k>", "<cmd>resize +1<cr>");
 
-vim.cmd("set shell=bash")
 vim.cmd("set shellcmdflag=-c")
 vim.cmd("set shellquote=")
 vim.cmd("set shellxquote=")
