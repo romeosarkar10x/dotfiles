@@ -32,6 +32,9 @@ vim.cmd("set shellxquote=")
 vim.keymap.set("t", "<Esc>", [[<C-\><C-n>]])
 vim.keymap.set("t", "<C-[>", [[<C-\><C-n>]])
 
+vim.keymap.set("n", "<Tab>", "gt")
+vim.keymap.set("n", "<S-Tab>", "gT")
+
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
