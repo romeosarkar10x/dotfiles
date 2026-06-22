@@ -20,6 +20,15 @@ return {
             }
         })
 
+        vim.lsp.config("jsonls", {
+            settings = {
+                json = {
+                    schemas = require("schemastore").json.schemas(),
+                    validate = { enable = true }
+                }
+            }
+        })
+
         vim.lsp.enable("lua_ls")
         vim.lsp.enable("jsonls")
         vim.lsp.enable("ts_ls")
