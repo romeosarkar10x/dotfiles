@@ -29,9 +29,7 @@ return {
             }
         })
 
-        vim.lsp.enable("lua_ls")
-        vim.lsp.enable("jsonls")
-        vim.lsp.enable("ts_ls")
+        vim.lsp.enable({ "lua_ls", "jsonls", "ts_ls", "yamlls", "lemminx", "pyright", "ruff" })
 
         vim.lsp.config("yamlls", {
             settings = {
@@ -48,10 +46,6 @@ return {
             }
         })
 
-        vim.lsp.enable("yamlls")
-        vim.lsp.enable("lemminx")
-        vim.lsp.enable("pyright")
-        vim.lsp.enable("ruff")
 
         vim.keymap.set("n", "<leader>lf", function() vim.lsp.buf.format() end)
     end
