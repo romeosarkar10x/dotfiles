@@ -29,7 +29,7 @@ return {
             }
         })
 
-        vim.lsp.enable({ "lua_ls", "jsonls", "ts_ls", "yamlls", "lemminx", "pyright", "ruff" })
+        vim.lsp.enable({ "lua_ls", "jsonls", "ts_ls", "yamlls", "lemminx", "pyright", "ruff", "html", "cssls", "astro" })
 
         vim.lsp.config("yamlls", {
             settings = {
