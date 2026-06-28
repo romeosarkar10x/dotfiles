@@ -3,6 +3,11 @@ return {
     lazy = false,
     priority = 1001,
     opts = {
-        window = { open = "tab" }
+        window = { open = "tab" },
+        hooks = {
+            should_block = function ()
+                return true
+            end
+        }
     }
 }
