@@ -67,6 +67,14 @@ vim.api.nvim_create_autocmd("LspAttach", {
     end
 })
 
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = "*",
+    callback = function ()
+        vim.bo.syntax = 'off'
+        pcall(vim.treesitter.start)
+    end
+})
+
 require("config.lazy")
 require("config.diagnostics")
 
