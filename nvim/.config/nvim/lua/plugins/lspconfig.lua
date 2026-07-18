@@ -29,7 +29,6 @@ return {
             }
         })
 
-        vim.lsp.enable({ "lua_ls", "jsonls", "ts_ls", "yamlls", "lemminx", "pyright", "ruff", "html", "cssls", "astro", "prismals" })
 
         vim.lsp.config("yamlls", {
             settings = {
@@ -46,6 +45,16 @@ return {
             }
         })
 
+        vim.lsp.config("eslint", {
+            -- cmd_env = { ESLINT_FLAGS = "unstable_native_nodejs_ts_config" },
+            filetypes = { "javascript", "typescript", "javascriptreact", "typescriptreact", "astro" }
+        })
+
+        vim.lsp.enable({
+            "lua_ls", "jsonls", "ts_ls", "yamlls",
+            "lemminx", "pyright", "ruff", "html",
+            "cssls", "astro", "prismals", "eslint"
+        })
 
         vim.keymap.set("n", "<leader>lf", function() vim.lsp.buf.format() end)
     end
