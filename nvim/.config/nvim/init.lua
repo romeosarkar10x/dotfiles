@@ -50,10 +50,22 @@ vim.api.nvim_create_autocmd("TermOpen", {
     end
 })
 
-vim.keymap.set("n", "K", function() vim.lsp.buf.hover({ border = "rounded" }) end)
+vim.api.nvim_create_autocmd("LspAttach", {
+    group = vim.api.nvim_create_augroup("user_lsp_config", {}),
+    callback = function(ev)
+        vim.bo[ev.buf].omnifunc = "v:lua.vim.lsp.omnifunc"
 
-vim.keymap.set("n", "gy", function() vim.lsp.buf.type_definition() end)
-vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end)
+        local opts = { buffer = ev.buf }
+
+        vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
+        vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
+
+        vim.keymap.set("n", "K", function() vim.lsp.buf.hover({ border = "rounded" }) end, opts)
+
+        vim.keymap.set("n", "gy", vim.lsp.buf.type_definition, opts)
+        vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts);
+    end
+})
 
 require("config.lazy")
 require("config.diagnostics")
