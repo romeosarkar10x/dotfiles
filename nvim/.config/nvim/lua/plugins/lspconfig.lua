@@ -53,7 +53,7 @@ return {
         vim.lsp.enable({
             "lua_ls", "jsonls", "ts_ls", "yamlls",
             "lemminx", "pyright", "ruff", "html",
-            "cssls", "astro", "prismals", "eslint"
+            "cssls", "astro", "prismals", "eslint", "tailwindcss"
         })
 
         vim.keymap.set("n", "<leader>lf", function() vim.lsp.buf.format() end)

@@ -8,7 +8,7 @@ return {
                 "lua_ls", "jsonls", "ts_ls", "yamlls",
                 "jdtls", "lemminx", "pyright", "ruff",
                 "html", "cssls", "astro", "prismals",
-                "eslint"
+                "eslint", "tailwindcss"
             },
             automatic_enable = false
         }
