@@ -37,7 +37,7 @@ local config = {
     },
 
     -- hook up your existing keymaps/capabilities here
-    on_attach = function(client, bufnr)
+    on_attach = function(_, bufnr)
         -- example keymaps
         local opts = { buffer = bufnr }
         vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
