@@ -48,3 +48,6 @@ font-family = Agave Nerd Font
 theme = catppuccin-mocha.conf
 window-padding-x = 10
 window-padding-y = 10
+
+custom-shader = /home/romeo/ghostty_cursor_shaders/cursor_warp.glsl
+confirm-close-surface = false
