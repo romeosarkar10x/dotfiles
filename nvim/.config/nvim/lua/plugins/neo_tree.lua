@@ -8,6 +8,12 @@ return {
     },
     lazy = false,
     opts = {
+        window = {
+            position = "right",
+            mappings = {
+                ["<Tab>"] = "none",
+            }
+        },
         filesystem = {
             use_libuv_file_watcher = true,
             filtered_items = {
