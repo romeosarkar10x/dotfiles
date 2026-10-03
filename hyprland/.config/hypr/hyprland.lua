@@ -15,6 +15,13 @@ hl.monitor({
     scale    = 1.25,
 })
 
+hl.monitor({
+    output   = "HDMI-A-2",
+    mode     = "3840x2160@120.00",
+    position = "0x0",
+    scale    = 1.25,
+})
+
 
 ---------------------
 ---- MY PROGRAMS ----
