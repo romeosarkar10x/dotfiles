@@ -40,6 +40,7 @@ vim.keymap.set("n", "<C-p>", "gT")
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
+vim.keymap.set("n", "<leader>tt", "<cmd>tab terminal<CR>", { desc = "Open terminal in a new tab" });
 vim.keymap.set("n", "<leader>r", ":source $MYVIMRC<CR>", { desc = "Reload config" })
 
 vim.api.nvim_create_autocmd("TermOpen", {
