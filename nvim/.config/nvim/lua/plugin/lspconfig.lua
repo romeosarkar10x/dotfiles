@@ -50,6 +50,14 @@ return {
             filetypes = { "javascript", "typescript", "javascriptreact", "typescriptreact", "astro" }
         })
 
+        vim.lsp.config("ts_ls", {
+            init_options = {
+                preferences = {
+                    maximumHoverLength = 100000
+                }
+            }
+        })
+
         vim.lsp.enable({
             "lua_ls", "jsonls", "ts_ls", "yamlls",
             "lemminx", "pyright", "ruff", "html",
