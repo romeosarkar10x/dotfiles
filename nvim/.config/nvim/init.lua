@@ -77,6 +77,6 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 
 require("config.lazy")
-require("config.diagnostics")
+require("config.diagnostic")
 
 vim.cmd.colorscheme "catppuccin-mocha"
