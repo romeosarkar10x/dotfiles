@@ -13,3 +13,5 @@ eval "$(fzf --bash)"
 
 set -o vi
 bind 'set show-mode-in-prompt on'
+
+[ -f ~/.bashrc.local ] && source ~/.bashrc.local
