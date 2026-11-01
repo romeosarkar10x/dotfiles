@@ -11,3 +11,5 @@ export HYPRCURSOR_SIZE=48
 eval "$(zoxide init bash --cmd cd)"
 eval "$(fzf --bash)"
 
+set -o vi
+bind 'set show-mode-in-prompt on'
