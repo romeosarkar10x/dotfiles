@@ -4,9 +4,6 @@
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 # PS1='[\u@\h \W]\$ '
-#
-export XCURSOR_SIZE=48
-export HYPRCURSOR_SIZE=48
 
 eval "$(zoxide init bash --cmd cd)"
 eval "$(fzf --bash)"
