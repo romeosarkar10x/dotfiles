@@ -1,12 +1,28 @@
 local jdtls = require("jdtls")
-
 local jdtls_path = vim.fn.stdpath("data") .. "/mason/packages/jdtls"
 local launcher = vim.fn.glob(jdtls_path .. "/plugins/org.eclipse.equinox.launcher_*.jar")
-local config_dir = jdtls_path .. "/config_linux" -- use config_mac on macOS
 
--- workspace folder per project
-local project_name = vim.fn.fnamemodify(vim.fn.getcwd(), ":p:h:t")
-local workspace_dir = vim.fn.stdpath("data") .. "/jdtls-workspace/" .. project_name
+
+local function get_config_name()
+    local unix_name = vim.uv.os_uname()
+    local machine = unix_name.machine
+    local system_name = unix_name.sysname
+    local is_arm = machine == "arm64" or machine == "aarch64"
+
+    if system_name == "Darwin" then
+        return is_arm and "config_mac_arm" or "config_mac"
+    elseif system_name == "Linux" then
+        return is_arm and "config_linux_arm" or "config_linux"
+    else
+        return "config_win"
+    end
+end
+
+local config_dir = jdtls_path .. "/" .. get_config_name() .. "/"
+local root_dir = vim.fs.root(0, { ".project", ".git", "mvnw", "gradlew", "pom.xml", "build.gradle" }) or vim.fn.getcwd()
+local project_name = vim.fn.fnamemodify(root_dir, ":t")
+local project_id = vim.fn.sha256(root_dir):sub(1, 7)
+local workspace_dir = vim.fn.stdpath("data") .. "/jdtls-workspace/" .. project_name .. "_" .. project_id .. "/"
 
 local config = {
     cmd = {
@@ -24,9 +40,7 @@ local config = {
         "-configuration", config_dir,
         "-data", workspace_dir,
     },
-
-    root_dir = require("jdtls.setup").find_root({ ".project", ".git", "mvnw", "gradlew", "pom.xml", "build.gradle" }),
-
+    root_dir = root_dir,
     settings = {
         java = {
             signatureHelp = { enabled = true },
