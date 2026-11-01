@@ -8,3 +8,6 @@ alias grep='grep --color=auto'
 export XCURSOR_SIZE=48
 export HYPRCURSOR_SIZE=48
 
+eval "$(zoxide init bash --cmd cd)"
+eval "$(fzf --bash)"
+
