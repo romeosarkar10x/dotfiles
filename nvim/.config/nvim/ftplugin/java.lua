@@ -23,6 +23,7 @@ local root_dir = vim.fs.root(0, { ".project", ".git", "mvnw", "gradlew", "pom.xm
 local project_name = vim.fn.fnamemodify(root_dir, ":t")
 local project_id = vim.fn.sha256(root_dir):sub(1, 7)
 local workspace_dir = vim.fn.stdpath("data") .. "/jdtls-workspace/" .. project_name .. "_" .. project_id .. "/"
+local lombok_jar_path = vim.fn.expand("$HOME/.local/share/nvim/mason/packages/jdtls/lombok.jar")
 
 local config = {
     cmd = {
@@ -33,6 +34,7 @@ local config = {
         "-Dlog.protocol=true",
         "-Dlog.level=ALL",
         "-Xmx1g",
+        "-javaagent:" .. lombok_jar_path,
         "--add-modules=ALL-SYSTEM",
         "--add-opens", "java.base/java.util=ALL-UNNAMED",
         "--add-opens", "java.base/java.lang=ALL-UNNAMED",
