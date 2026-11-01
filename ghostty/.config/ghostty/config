@@ -44,10 +44,21 @@
 # resize-overlay-duration = 4s 200ms
 
 shell-integration = none
-font-family = Agave Nerd Font
-theme = catppuccin-mocha.conf
-window-padding-x = 10
-window-padding-y = 10
 
-custom-shader = /home/romeo/ghostty_cursor_shaders/cursor_warp.glsl
+font-family = MonoLisa
+font-style = Normal
+font-variation = wght=400
+font-variation-bold = wght=700
+font-variation-italic = wght=400
+font-variation-bold-italic = wght=700
+
+theme = catppuccin-mocha.conf
+
+window-padding-x = 4
+window-padding-y = 4
+
+custom-shader = /home/romeo/ghostty_cursor_shaders/cursor_sweep.glsl
 confirm-close-surface = false
+
+background-opacity = 0.95
+background-blur = 80
